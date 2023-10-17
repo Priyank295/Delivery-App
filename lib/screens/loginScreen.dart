@@ -171,17 +171,18 @@ class _LoginScreenState extends State<LoginScreen> {
                     authethicate(context, _uname.text, _pass.text);
                   },
                   child: Container(
-                    margin: EdgeInsets.symmetric(vertical: 20),
+                    // padding: EdgeInsets.symmetric(),
+                    margin: EdgeInsets.symmetric(vertical: 20, horizontal: 50),
                     width: double.infinity,
                     height: 49,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(30),
-                      color: Color(0xfff43A047),
+                      color: Color(0xfffFFF9C5),
                     ),
                     child: Center(
                       child: Text(
                         "Login",
-                        style: TextStyle(color: Colors.white, fontSize: 20),
+                        style: TextStyle(color: Colors.black, fontSize: 20),
                       ),
                     ),
                   ),
