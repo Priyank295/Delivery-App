@@ -1,0 +1,741 @@
+{
+	"info": {
+		"_postman_id": "d52c6279-3ead-4e1f-8d97-65592b4cca4d",
+		"name": "MMPL",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "anuradha.tomar90@gmail.com",
+							"type": "default"
+						},
+						{
+							"key": "password",
+							"value": "anuradha@123",
+							"type": "default"
+						},
+						{
+							"key": "latitude",
+							"value": "23.0487493",
+							"type": "default"
+						},
+						{
+							"key": "longitude",
+							"value": "72.5211977",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://mmpl.vivekenterprise.org/public/api/login",
+					"protocol": "https",
+					"host": [
+						"mmpl",
+						"vivekenterprise",
+						"org"
+					],
+					"path": [
+						"public",
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer b3VhOEpUYWQ1TnhIOUxkQ3lZS25SeG1icVdYVDdRMkZ6d3VCbjB5YnpNWkZ0bkN1SW1RNXFWR09UcGVI63e0861a0fd1b",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/logout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "checkIn",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "cDFhQWZYbnlOVUNVWndQMHFyYXJzUk9ZUEhUVHhuZWEzVUpZdFd3eVQ1bkd5VXNnN3B2em1hcHJxaG1q64534cadaa07c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer MjBTMWYzZmdSZ3RRUWl1Z1B2cmxJbFJLOUFET29jRkZ2aUdhcmtOY0hYQXlTNFZYSWVlRngzbEVlVjVi640ec73b963c6",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "latitude",
+							"value": "23.060860",
+							"type": "default"
+						},
+						{
+							"key": "longitude",
+							"value": "72.524360",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://mmpl.vivekenterprise.org/public/api/checkin",
+					"protocol": "https",
+					"host": [
+						"mmpl",
+						"vivekenterprise",
+						"org"
+					],
+					"path": [
+						"public",
+						"api",
+						"checkin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Take Leave",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "cDFhQWZYbnlOVUNVWndQMHFyYXJzUk9ZUEhUVHhuZWEzVUpZdFd3eVQ1bkd5VXNnN3B2em1hcHJxaG1q64534cadaa07c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer amN1OVFPckgzWE4wQWYzUmtPaWozaDE4ZDZjWmZBMWx0OUEwTlcyZXRUVEo1QUlKc3lMYTI5MmNGZ1VB63ef57909166d",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "start_date",
+							"value": "2023-02-18",
+							"type": "default"
+						},
+						{
+							"key": "end_date",
+							"value": "2023-02-18",
+							"type": "default"
+						},
+						{
+							"key": "reason",
+							"value": "ABDJ SDIOD DFJDIDFG FDGKFDR",
+							"type": "default"
+						},
+						{
+							"key": "leave_type",
+							"value": "0",
+							"description": "0 is Regular, 1 is Paid Leave",
+							"type": "default"
+						},
+						{
+							"key": "day_type",
+							"value": "0",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://mmpl.vivekenterprise.org/public/api/takeLeave",
+					"protocol": "https",
+					"host": [
+						"mmpl",
+						"vivekenterprise",
+						"org"
+					],
+					"path": [
+						"public",
+						"api",
+						"takeLeave"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Change Password",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer M2V5QThhYXVLSzFnTEJjZFliWm0xaVpNWHhueVVrN3BpSlpSdFlUa2Q4Y08wdUJjaTM0YnFLTVZUQXhm63e3454709e87",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "current_password",
+							"value": "123456",
+							"type": "default"
+						},
+						{
+							"key": "new_password",
+							"value": "1234567",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://finoel.co.in/public/api/change_password",
+					"protocol": "https",
+					"host": [
+						"finoel",
+						"co",
+						"in"
+					],
+					"path": [
+						"public",
+						"api",
+						"change_password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "checkOut",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "cDFhQWZYbnlOVUNVWndQMHFyYXJzUk9ZUEhUVHhuZWEzVUpZdFd3eVQ1bkd5VXNnN3B2em1hcHJxaG1q64534cadaa07c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer MjBTMWYzZmdSZ3RRUWl1Z1B2cmxJbFJLOUFET29jRkZ2aUdhcmtOY0hYQXlTNFZYSWVlRngzbEVlVjVi640ec73b963c6",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "latitude",
+							"value": "23.0604154860",
+							"type": "text"
+						},
+						{
+							"key": "longitude",
+							"value": "72.524545360",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://mmpl.vivekenterprise.org/public/api/checkout",
+					"protocol": "https",
+					"host": [
+						"mmpl",
+						"vivekenterprise",
+						"org"
+					],
+					"path": [
+						"public",
+						"api",
+						"checkout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BreakIn",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "cDFhQWZYbnlOVUNVWndQMHFyYXJzUk9ZUEhUVHhuZWEzVUpZdFd3eVQ1bkd5VXNnN3B2em1hcHJxaG1q64534cadaa07c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer MjBTMWYzZmdSZ3RRUWl1Z1B2cmxJbFJLOUFET29jRkZ2aUdhcmtOY0hYQXlTNFZYSWVlRngzbEVlVjVi640ec73b963c6",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "latitude",
+							"value": "23.060860",
+							"type": "text"
+						},
+						{
+							"key": "longitude",
+							"value": "72.524360",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://mmpl.vivekenterprise.org/public/api/breakin",
+					"protocol": "https",
+					"host": [
+						"mmpl",
+						"vivekenterprise",
+						"org"
+					],
+					"path": [
+						"public",
+						"api",
+						"breakin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BreakOut",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "cDFhQWZYbnlOVUNVWndQMHFyYXJzUk9ZUEhUVHhuZWEzVUpZdFd3eVQ1bkd5VXNnN3B2em1hcHJxaG1q64534cadaa07c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer MjBTMWYzZmdSZ3RRUWl1Z1B2cmxJbFJLOUFET29jRkZ2aUdhcmtOY0hYQXlTNFZYSWVlRngzbEVlVjVi640ec73b963c6",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "latitude",
+							"value": "23.060860",
+							"type": "text"
+						},
+						{
+							"key": "longitude",
+							"value": "72.524360",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://mmpl.vivekenterprise.org/public/api/breakout",
+					"protocol": "https",
+					"host": [
+						"mmpl",
+						"vivekenterprise",
+						"org"
+					],
+					"path": [
+						"public",
+						"api",
+						"breakout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getLeaveList",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "cDFhQWZYbnlOVUNVWndQMHFyYXJzUk9ZUEhUVHhuZWEzVUpZdFd3eVQ1bkd5VXNnN3B2em1hcHJxaG1q64534cadaa07c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer dEZiQVljTGplcU9Id05Rems0Yk01SGNySXRxWW5ocTFYS3MxZ0NZWmhnTDAxUXZxSzlWZ0xkcEhBeU9V63f854b3b8c47",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://mmpl.vivekenterprise.org/public/api/getLeaveList",
+					"protocol": "https",
+					"host": [
+						"mmpl",
+						"vivekenterprise",
+						"org"
+					],
+					"path": [
+						"public",
+						"api",
+						"getLeaveList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "StartNavigation",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "cDFhQWZYbnlOVUNVWndQMHFyYXJzUk9ZUEhUVHhuZWEzVUpZdFd3eVQ1bkd5VXNnN3B2em1hcHJxaG1q64534cadaa07c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer Z2JWVlBtam5pMmxySzdmdVNXTU9ZVFBmcEhCVDBhMUc5Mmt2dTFuUlVJcEljalJSdVJnQ2xvdkUxUnZH644f5fa7b890d",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://mmpl.vivekenterprise.org/public/api/startNavigation",
+					"protocol": "https",
+					"host": [
+						"mmpl",
+						"vivekenterprise",
+						"org"
+					],
+					"path": [
+						"public",
+						"api",
+						"startNavigation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "StopNavigation",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "cDFhQWZYbnlOVUNVWndQMHFyYXJzUk9ZUEhUVHhuZWEzVUpZdFd3eVQ1bkd5VXNnN3B2em1hcHJxaG1q64534cadaa07c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer Z2JWVlBtam5pMmxySzdmdVNXTU9ZVFBmcEhCVDBhMUc5Mmt2dTFuUlVJcEljalJSdVJnQ2xvdkUxUnZH644f5fa7b890d",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://mmpl.vivekenterprise.org/public/api/stopNavigation",
+					"protocol": "https",
+					"host": [
+						"mmpl",
+						"vivekenterprise",
+						"org"
+					],
+					"path": [
+						"public",
+						"api",
+						"stopNavigation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "home",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "cDFhQWZYbnlOVUNVWndQMHFyYXJzUk9ZUEhUVHhuZWEzVUpZdFd3eVQ1bkd5VXNnN3B2em1hcHJxaG1q64534cadaa07c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer Y1VUSWp2dTJ3UUtaS0V6Vld5MmxEdjZhdEFQcDNhTmtPTFM3SkZ4eW00Zmo2WEdmcVNKcWN2QUhiRlpu641d71e47a7ce",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://mmpl.vivekenterprise.org/public/api/home",
+					"protocol": "https",
+					"host": [
+						"mmpl",
+						"vivekenterprise",
+						"org"
+					],
+					"path": [
+						"public",
+						"api",
+						"home"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getLocationDetails",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "cDFhQWZYbnlOVUNVWndQMHFyYXJzUk9ZUEhUVHhuZWEzVUpZdFd3eVQ1bkd5VXNnN3B2em1hcHJxaG1q64534cadaa07c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer cENIWnNNQTBadG45RmYwSGV3SjQwMFdIb2xHUFd3OVEyangwUXZQT0NEd2Rqc3lHOXFmdVZscXpwTGh063fef49a1b1e0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "latitude",
+							"value": "23.060860",
+							"type": "text"
+						},
+						{
+							"key": "longitude",
+							"value": "72.524360",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://mmpl.vivekenterprise.org/public/api/getLocationDetails",
+					"protocol": "https",
+					"host": [
+						"mmpl",
+						"vivekenterprise",
+						"org"
+					],
+					"path": [
+						"public",
+						"api",
+						"getLocationDetails"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addCurrentLocation",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "cDFhQWZYbnlOVUNVWndQMHFyYXJzUk9ZUEhUVHhuZWEzVUpZdFd3eVQ1bkd5VXNnN3B2em1hcHJxaG1q64534cadaa07c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer NWVGaWpSSFVhbTJMSUJNOW5IM1NiV2dtRnRRajZjRVdwVjJ6VHBJc0FHV05pcTB0SmRPd2FNRVRQUFd4640b04c3e3474",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "latitude",
+							"value": "23.0400754",
+							"type": "text"
+						},
+						{
+							"key": "longitude",
+							"value": "72.5292933",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "j b tower, Ahmedabad, Gujarat",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://mmpl.vivekenterprise.org/public/api/addCurrentLocation",
+					"protocol": "https",
+					"host": [
+						"mmpl",
+						"vivekenterprise",
+						"org"
+					],
+					"path": [
+						"public",
+						"api",
+						"addCurrentLocation"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
